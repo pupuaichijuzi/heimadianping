@@ -1,5 +1,6 @@
 package com.puffyna.service;
 
+import com.puffyna.dto.Result;
 import com.puffyna.entity.Shop;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IShopService extends IService<Shop> {
 
+    Result queryShopById(Long id) throws InterruptedException;
+
+    Result update(Shop shop);
 }
